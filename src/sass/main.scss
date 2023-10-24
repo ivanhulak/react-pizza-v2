@@ -1,0 +1,15 @@
+@import './base/base';
+@import './base/vars';
+@import './base/reset';
+@import './base/fonts';
+
+@import './blocks/header.scss';
+@import './blocks/categories.scss';
+@import './blocks/pagination.scss';
+@import './blocks/pizza-block.scss';
+@import './blocks/pizza-item.scss';
+@import './blocks/single-pizza.scss';
+@import './blocks/button.scss';
+@import './blocks/empty-cart.scss';
+@import './blocks/not-found.scss';
+@import './blocks/cart.scss';

@@ -1,0 +1,14 @@
+.notFound {
+   padding: 20px 0px;
+   &__body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+   }
+   &__text{
+      font-size: 28px;
+      font-weight: 600;
+   }
+}

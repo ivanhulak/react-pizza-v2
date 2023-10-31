@@ -19,7 +19,7 @@ export type CartItemType = {
 
 export type SortType = {
    name: string;
-   type: SortTypeEnum;
+   type: 'rating' | 'price' | 'name';
    order: boolean;
 }
 

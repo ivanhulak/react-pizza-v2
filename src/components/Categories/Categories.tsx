@@ -10,7 +10,7 @@ type CategoriesProps = {
    handleChangeSortType: (obj: SortType) => void;
 }
 
-const categoryList = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые']
+const categoryList: string[] = ['Все', 'Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые']
 
 export const Categories: React.FC<CategoriesProps> = React.memo(({ 
    sortType, 

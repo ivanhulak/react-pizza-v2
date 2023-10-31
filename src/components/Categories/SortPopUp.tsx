@@ -1,6 +1,7 @@
 import React from 'react'
 import cn from 'classnames'
 import { SortType } from '../../@types/common';
+import { SortTypeEnum } from '../../@types/enums';
 
 type SortPopUpProps = {
    sortType: SortType;
@@ -29,10 +30,10 @@ export const SortPopUp: React.FC<SortPopUpProps> = React.memo(
       }
    }, [])
 
-   const popupItems = [
-      { name: 'популярности', type: 'rating', order: order },
-      { name: 'цене', type: 'price', order: order },
-      { name: 'алфавиту', type: 'name', order: order },
+   const popupItems: SortType[] = [
+      { name: 'популярности', type: SortTypeEnum.RATING, order: order },
+      { name: 'цене', type: SortTypeEnum.PRICE, order: order },
+      { name: 'алфавиту', type: SortTypeEnum.NAME, order: order },
    ]
 
    return (
@@ -49,7 +50,7 @@ export const SortPopUp: React.FC<SortPopUpProps> = React.memo(
          </div>
          <ul className={cn('sort-by__modal', { 'opened': openPopup })}
          >
-            {popupItems.map((obj: any) => (
+            {popupItems.map((obj: SortType) => (
                <li
                   key={obj.type}
                   className={cn('sort-by__item', {

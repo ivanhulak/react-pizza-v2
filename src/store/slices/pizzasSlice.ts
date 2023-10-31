@@ -22,8 +22,7 @@ export const fetchPizzas = createAsyncThunk('pizzas/fetchPizzas',
    async (params: FetchPizzasParamsType) => {
       const { search, order, type, category, currentPage } = params
       const { data } = await axios.get<PizzaType[]>(
-         `${fetchRef}?page=${currentPage}&limit=4${search}&sortBy=${type}\n
-         &order=${order ? 'asc' : 'desc'}${category}`
+         `${fetchRef}?page=${currentPage}&limit=4${search}&sortBy=${type}&order=${order}${category}`
       )
       return data as PizzaType[]
    }

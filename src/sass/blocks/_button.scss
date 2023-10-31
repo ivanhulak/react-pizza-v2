@@ -5,9 +5,6 @@
    @include adaptiveValue('padding-bottom', 16, 10);
    @include adaptiveValue('padding-left', 30, 20);
    @include adaptiveValue('padding-right', 30, 20);
-   @media (max-width: 768px){
-      width: 190px;
-   }
 }
 
 .goback__btn--active{
@@ -24,4 +21,7 @@
 .pay-btn{
    background: var(--orange);
    color: var(--white);
+   @media (max-width: 768px){
+      width: 190px;
+   }
 }

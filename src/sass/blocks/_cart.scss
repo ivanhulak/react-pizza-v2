@@ -223,6 +223,9 @@
       display: flex;
       @include adaptiveValue('gap', 16, 8);
       align-items: center;
+      @media (max-width: 768px){
+         width: 190px;
+      }
    }
 }
 

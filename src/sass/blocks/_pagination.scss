@@ -1,20 +1,32 @@
 .pagination{
    padding-top: 50px;
+   @include adaptiveValue('padding-top', 50, 30);
    &__list{
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 20px;
+      @include adaptiveValue('gap', 20, 10);
    }
    &__item{
+      display: flex;
+      justify-content: center;
+      align-items: center;
       background: var(--white);
       color: var(--black);
       font-size: 18px;
-      padding: 10px 20px;
+      @include adaptiveValue('font-size', 18, 14);
+      width: 50px;
+      height: 45px;
       border-radius: 14px;
       border: 2px solid var(--orange);
       cursor: pointer;
       transition: all 0.3s ease;
+      @media (max-width: 600px){
+         width: 30px;
+         height: 30px;
+         padding: 0;
+         border-radius: 8px;
+      }
       &.selected{
          background: var(--orange);
          color: var(--white);
@@ -26,11 +38,17 @@
    &__btn{
       background: var(--black);
       color: var(--white);
-      font-size: 18px;
+      @include adaptiveValue('font-size', 18, 14);
       padding: 6px 20px;
       border-radius: 14px;
       cursor: pointer;
       transition: all 0.3s ease;
+      @media (max-width: 600px){
+         padding: 4px 10px;
+      }
+      @media (max-width: 375px){
+         display: none;
+      }
       &:hover{
          opacity: 0.7;
       }
